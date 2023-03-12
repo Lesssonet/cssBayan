@@ -1,0 +1,141 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.accordion-container {
+    margin: 60px auto;
+    width: 800px;
+}
+
+.meme {
+    width: 100%;
+}
+
+.cat-meme {
+    margin: 0 auto;
+    height: 0;
+    color: rgba(0, 0, 0, 0);
+    line-height: 18px;
+    box-sizing: border-box;
+    transition: color 0.5s, padding 0.5s;
+    overflow: hidden;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 10px 16px rgba(0, 0, 0, 0.2);
+}
+
+label {
+    cursor: pointer;
+    display: block;
+    padding: 15px 20px;
+    width: 100%;
+    font-weight: 300;
+    box-sizing: border-box;
+    z-index: 100;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    margin: 0 0 5px;
+    transition: color .35s;
+}
+
+label:hover {
+    background-color: #031220;
+    color: #FFF;
+    transition: all ease .65s;
+    box-shadow: 0 8px 26px rgba(0, 0, 0, 0.4), 0 28px 30px rgba(0, 0, 0, 0.3);
+}
+
+input {
+    display: none;
+}
+
+label:before {
+    content: '\276F';
+    float: right;
+}
+
+input:checked+label {
+    background-color: #031220;
+    color: #FFF;
+    box-shadow: 0 8px 26px rgba(0, 0, 0, 0.4), 0 28px 30px rgba(0, 0, 0, 0.3);
+}
+
+input:checked+label:before {
+    transition: transform .45s;
+    transform: rotate(90deg);
+}
+
+input:checked+label+.cat-meme {
+    height: 790px;
+    opacity: 1;
+    transition: 0.5s;
+    color: #000;
+}
+
+@media (min-width: 1720px) {
+
+    .accordion-container {
+        width: 1400px;
+    }
+
+
+    .cat-meme {
+        font-size: 20px;
+    }
+
+    label {
+        font-size: 20px;
+    }
+
+
+    input:checked+label+.cat-meme {
+        height: 1100px;
+    }
+
+}
+
+@media (max-width: 820px) {
+
+    .accordion-container {
+        width: 500px;
+    }
+
+
+    .cat-meme {
+        font-size: 12px;
+    }
+
+    label {
+        font-size: 12px;
+    }
+
+
+    input:checked+label+.cat-meme {
+        height: 500px;
+    }
+
+}
+
+@media (max-width: 420px) {
+    .accordion-container {
+        width: 300px;
+    }
+
+
+    .cat-meme {
+        font-size: 10px;
+    }
+
+    label {
+        font-size: 10px;
+    }
+
+
+    input:checked+label+.cat-meme {
+        height: 300px;
+    }
+
+}
