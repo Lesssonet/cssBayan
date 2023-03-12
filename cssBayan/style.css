@@ -12,3 +12,62 @@ body {
 .meme {
     width: 800px;
 }
+
+.cat-meme {
+    margin: 0 auto;
+    height: 0;
+    color: rgba(0, 0, 0, 0);
+    line-height: 18px;
+    box-sizing: border-box;
+    transition: color 0.5s, padding 0.5s;
+    overflow: hidden;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 10px 16px rgba(0, 0, 0, 0.2);
+}
+
+label {
+    cursor: pointer;
+    display: block;
+    padding: 15px 20px;
+    width: 100%;
+    font-weight: 300;
+    box-sizing: border-box;
+    z-index: 100;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    margin: 0 0 5px;
+    transition: color .35s;
+}
+
+label:hover {
+    color: #000000;
+}
+
+input {
+    display: none;
+}
+
+label:before {
+    content: '\276F';
+    float: right;
+}
+
+input:checked+label {
+    background-color: #031220;
+    color: #FFF;
+    box-shadow: 0 8px 26px rgba(0, 0, 0, 0.4), 0 28px 30px rgba(0, 0, 0, 0.3);
+}
+
+input:checked+label:before {
+    transition: transform .45s;
+    transform: rotate(90deg);
+}
+
+input:checked+label+.cat-meme {
+    transition: height 1.2s;
+    height: auto;
+    margin-top: -5px;
+    color: #000;
+}
