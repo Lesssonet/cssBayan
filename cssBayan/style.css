@@ -1,0 +1,14 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.accordion-container {
+    margin: 60px auto;
+    width: 800px;
+}
+
+.meme {
+    width: 800px;
+}
