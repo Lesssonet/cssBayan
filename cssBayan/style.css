@@ -75,7 +75,30 @@ input:checked+label+.cat-meme {
     color: #000;
 }
 
+@media (min-width: 1720px) {
+
+    .accordion-container {
+        width: 1400px;
+    }
+
+
+    .cat-meme {
+        font-size: 20px;
+    }
+
+    label {
+        font-size: 20px;
+    }
+
+
+    input:checked+label+.cat-meme {
+        height: 1100px;
+    }
+
+}
+
 @media (max-width: 820px) {
+
     .accordion-container {
         width: 500px;
     }
