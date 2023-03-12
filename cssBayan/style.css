@@ -10,7 +10,7 @@ body {
 }
 
 .meme {
-    width: 800px;
+    width: 100%;
 }
 
 .cat-meme {
@@ -42,7 +42,10 @@ label {
 }
 
 label:hover {
-    color: #000000;
+    background-color: #031220;
+    color: #FFF;
+    transition: all ease .65s;
+    box-shadow: 0 8px 26px rgba(0, 0, 0, 0.4), 0 28px 30px rgba(0, 0, 0, 0.3);
 }
 
 input {
@@ -66,8 +69,50 @@ input:checked+label:before {
 }
 
 input:checked+label+.cat-meme {
-    transition: height 1.2s;
-    height: auto;
-    margin-top: -5px;
+    height: 790px;
+    opacity: 1;
+    transition: 0.5s;
     color: #000;
+}
+
+@media (max-width: 820px) {
+    .accordion-container {
+        width: 500px;
+    }
+
+
+    .cat-meme {
+        font-size: 12px;
+    }
+
+    label {
+        font-size: 12px;
+    }
+
+
+    input:checked+label+.cat-meme {
+        height: 500px;
+    }
+
+}
+
+@media (max-width: 420px) {
+    .accordion-container {
+        width: 300px;
+    }
+
+
+    .cat-meme {
+        font-size: 10px;
+    }
+
+    label {
+        font-size: 10px;
+    }
+
+
+    input:checked+label+.cat-meme {
+        height: 300px;
+    }
+
 }
